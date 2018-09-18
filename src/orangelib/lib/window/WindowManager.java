@@ -1,6 +1,6 @@
 
 
-package hexlib.lib.windows;
+package orangelib.lib.window;
 
 import javax.swing.*;
 /**
