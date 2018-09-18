@@ -72,7 +72,10 @@ public class WindowManager {
      * automatically sets up the JFrame.
      */
     public static void auto() {
-        
+        frame.create();
+        frame.setSize(1280, 720);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
-    
 }
