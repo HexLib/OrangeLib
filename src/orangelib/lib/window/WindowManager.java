@@ -10,8 +10,8 @@ import javax.swing.*;
  * @version 1.00
  */
 public class WindowManager {
-   private JFrame frame = null;
-  
+   private static JFrame frame = null;
+   private static IconImage img = new IconImage(".src/orangelib/development-512.png");
    /**
     * WindowManager.createFrame(String name);
     * 
@@ -19,6 +19,7 @@ public class WindowManager {
     */
     public static void createFrame(String name) {
         frame = new JFrame(name);
+        frame.setImageIcon(img);
     }
   
   /**
@@ -27,7 +28,8 @@ public class WindowManager {
    * Creates a JFrame.
    */
    public static void createFrame() {
-     frame = new JFrame();
+      frame = new JFrame();
+
    }
     
     /**
@@ -78,4 +80,9 @@ public class WindowManager {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
+    public static void setIcon(ImageIcon icon) {
+        img = icon;
+        frame.setImageIcon(img);
+    }
+       
 }
